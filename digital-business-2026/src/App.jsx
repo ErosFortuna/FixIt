@@ -2,12 +2,11 @@
 import { useEffect, useState } from "react";
 
 const teamMembers = [
-  { name: "Nguyễn Thị Vân Anh", number: "01", role: "Thành viên đội thi", color: "peach" },
-  { name: "Phạm Huỳnh Nguyên Thảo", number: "02", role: "Thành viên đội thi", color: "purple" },
-  { name: "Đỗ Ngọc Hoàn Mỹ", number: "03", role: "Thành viên đội thi", color: "blue" },
-  { name: "Nguyễn Hồ Hoàng Quốc", number: "04", role: "Thành viên đội thi", color: "orange" },
-  { name: "Trần Thị Tường Vi", number: "05", role: "Thành viên đội thi", color: "green" },
-  { name: "Vũ Hoàng Pháp", number: "06", role: "Thành viên đội thi", color: "pink" },
+  { name: "Nguyễn Thị Vân Anh", number: "01", role: "Thành viên đội thi", color: "peach", image: "/anh.PNG" },
+  { name: "Phạm Huỳnh Nguyên Thảo", number: "02", role: "Thành viên đội thi", color: "purple", image: "/thao.jpg" },
+  { name: "Đỗ Ngọc Hoàn Mỹ", number: "03", role: "Thành viên đội thi", color: "blue", image: "/my.PNG" },
+  { name: "Nguyễn Hồ Hoàng Quốc", number: "04", role: "Thành viên đội thi", color: "orange", image: "/quoc.PNG" },
+  { name: "Vũ Hoàng Pháp", number: "05", role: "Thành viên đội thi", color: "pink", image: "/phap.PNG" },
 ];
 
 const workflow = [
@@ -735,7 +734,7 @@ function Team() {
           <Reveal>
             <SectionLabel>06 / ĐỘI NGŨ THỰC HIỆN</SectionLabel>
             <h2>
-              Sáu thành viên.
+              Năm thành viên.
               <br />
               <span className="muted-text">Chung một định hướng.</span>
             </h2>
@@ -746,7 +745,7 @@ function Team() {
           </Reveal>
           <Reveal delay={150}>
             <div className="team-count">
-              <strong>06</strong>
+              <strong>05</strong>
               <span>THÀNH VIÊN ĐỘI THI</span>
             </div>
           </Reveal>
@@ -757,12 +756,13 @@ function Team() {
             <Reveal key={member.number} delay={(index % 3) * 90}>
               <article className="team-card">
                 <div className={`member-art member-art-${member.color}`}>
+                  <img
+                    className="member-photo"
+                    src={member.image}
+                    alt={`Ảnh ${member.name}`}
+                    loading="lazy"
+                  />
                   <span className="member-number">{member.number}</span>
-                  <div className="member-avatar">
-                    <span>{member.name.split(" ").slice(-2).map((part) => part[0]).join("")}</span>
-                  </div>
-                  <span className="member-star">✳</span>
-                  <span className="member-orbit" />
                 </div>
                 <div className="member-info">
                   <span className="member-role">{member.role}</span>
