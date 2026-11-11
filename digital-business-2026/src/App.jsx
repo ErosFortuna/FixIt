@@ -8,6 +8,7 @@ import {
   HelpCircle,
   Home,
   Image as ImageIcon,
+  Mail,
   Menu,
   MessageSquare,
   PackageOpen,
@@ -943,7 +944,7 @@ function Contact() {
         <Reveal>
           <span className="contact-overline">
             <span className="label-dot" />
-            FIXIT · DIGITAL BUSINESS 2026
+            FIXIT · DBC 2026
           </span>
           <h2>
             Đau đầu vì đơn hoàn?
@@ -977,8 +978,12 @@ function Footer() {
     <footer className="site-footer">
       <div className="page-container footer-inner">
         <Logo />
-        <p>Ý tưởng quản lý bằng chứng và khiếu nại cho người bán online.</p>
-        <a href="#home">Về đầu trang</a>
+        <p>Đại học FPT Đà Nẵng.</p>
+        <span className="footer-contest">Cuộc thi Sinh viên Kinh doanh số 2026</span>
+        <a href="mailto:anhvannguyen114@gmail.com" className="footer-email">
+          <Mail size={13} strokeWidth={2} />
+          <span>anhvannguyen114@gmail.com</span>
+        </a>
         <span className="footer-copyright">© 2026 FIXIT TEAM</span>
       </div>
     </footer>

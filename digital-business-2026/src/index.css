@@ -2310,11 +2310,27 @@ p {
   height: 28px;
 }
 
-.footer-inner p {
+.footer-inner p,
+.footer-contest {
   max-width: 320px;
   margin: 0;
   color: #7f8b9d;
-  font-size: 0.67rem;
+  font-size: 0.68rem;
+  line-height: 1.4;
+}
+
+.footer-inner .footer-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #7f8b9d;
+  font-size: 0.68rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-inner .footer-email:hover {
+  color: var(--orange);
 }
 
 .footer-inner > a:not(.logo) {
@@ -2955,7 +2971,8 @@ p {
     padding: 27px 0;
   }
 
-  .footer-inner p {
+  .footer-inner p,
+  .footer-contest {
     max-width: 100%;
   }
 }
